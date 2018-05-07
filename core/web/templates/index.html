@@ -1,0 +1,67 @@
+﻿<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" media="screen"/>
+    <title>聊天demo</title>
+    <link rel=stylesheet type=text/css href=css/style.css>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/chat.js"></script>
+</head>
+<body>
+
+<div class="speak_window">
+    <div class="speak_box">
+        <div class="answer">
+            <div class="heard_img left"><img src="images/ai.png"></div>
+            <div class="answer_text">
+                <p>hello~~~我是你的专属宝宝！你想和我说什么？</p>
+                <i></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="saying">
+    <img src="images/saying.gif"/>
+</div>
+
+<div class="wenwen-footer">
+    <div class="wenwen_btn left" onClick="to_write()"><img src="images/jp_btn.png"></div>
+    <div class="wenwen_text left">
+        <div class="write_box">
+            <input type="text" class="left" onKeyUp="keyup()" placeholder="请输入关键字"/>
+        </div>
+        <div class="circle-button" id="wenwen">
+            按住 说话
+        </div>
+    </div>
+    <div class="wenwen_help right">
+        <a href="https://github.com/littleredhat1997">
+            <img src="images/help_btn.png">
+        </a>
+        <button id="enter" onClick="up_say()" class="right">发送</button>
+    </div>
+    <div style="opacity:0;" class="clear"></div>
+</div>
+
+<div style="text-align:center;">
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(document).keydown(function (event) {
+            if (event.keyCode == 13) {
+                $("#enter").click();
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

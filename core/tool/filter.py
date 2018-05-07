@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-from collections import defaultdict
 import re
+from collections import defaultdict
 
 __all__ = ['NaiveFilter', 'BSFilter', 'DFAFilter']
 __author__ = 'observer'
@@ -9,7 +9,6 @@ __date__ = '2012.01.05'
 
 
 class NaiveFilter():
-
     '''Filter Messages from filter_words.txt
     very simple tool implementation
     >>> f = NaiveFilter()
@@ -33,7 +32,6 @@ class NaiveFilter():
 
 
 class BSFilter:
-
     '''Filter Messages from filter_words.txt
     Use Back Sorted Mapping to reduce replacement times
     >>> f = BSFilter()
@@ -84,7 +82,6 @@ class BSFilter:
 
 
 class DFAFilter():
-
     '''Filter Messages from filter_words.txt
     Use DFA to keep algorithm perform constantly
     >>> f = DFAFilter()
@@ -165,6 +162,7 @@ if __name__ == "__main__":
     gfw = DFAFilter()
     gfw.parse("filter_words.txt")
     import time
+
     t = time.time()
     print gfw.filter("法轮功 我操操操", "*")
     print gfw.filter("针孔摄像机 我操操操", "*")
