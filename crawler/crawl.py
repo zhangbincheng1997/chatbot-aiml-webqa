@@ -1,36 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-from urllib import quote
-
-import requests
-from bs4 import BeautifulSoup
-
-
-# 百度搜索
-def get_baidu(message):
-    url = 'https://www.baidu.com/s?wd=' + quote(message)
-    headers = {'User-Agent':
-                   'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'}
-    soup_baidu = BeautifulSoup(requests.get(url=url, headers=headers).content, "lxml")
-    return soup_baidu
-
-
-# 搜狗搜索
-def get_sougo(message):
-    url = 'https://www.sogou.com/web?query=' + quote(message)
-    headers = {'User-Agent':
-                   'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'}
-    soup_sougou = BeautifulSoup(requests.get(url=url, headers=headers).content, "lxml")
-    return soup_sougou
-
-
-# 链接搜索
-def get_html(url):
-    headers = {'User-Agent':
-                   'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'}
-    soup_html = BeautifulSoup(requests.get(url=url, headers=headers).content, "lxml")
-    return soup_html
+from QA.crawler.search import *
 
 
 #####################
@@ -38,6 +9,24 @@ def get_html(url):
 #####################
 def search(message):
     result = ''
+
+    '''新浪新闻'''
+    if message.find('新闻') != -1:
+        result += u'我给你讲个新闻吧~~~\n'
+        result += news()
+        return result
+
+    '''糗事百科'''
+    if message.find('笑话') != -1:
+        result += u'我给你讲个笑话吧~~~\n'
+        result += joke()
+        return result
+
+    '''每日一文'''
+    if message.find('文章') != -1:
+        result += u'我给你讲个文章吧~~~\n'
+        result += read()
+        return result
 
     '''搜狗天气'''
     if message.find('天气') != -1:
@@ -59,6 +48,20 @@ def search(message):
                 result += '\n'
             return result
 
+    '''搜狗空气'''
+    if message.find('空气') != -1:
+        soup_sougou = get_sougo(message)
+        res = soup_sougou.find(class_='show-box')
+        if res is not None:
+            print '搜狗空气找到答案'
+            num = soup_sougou.find(class_='num').get_text().strip()
+            state = soup_sougou.find(class_='state').get_text().strip()
+            t = soup_sougou.find(class_='t').get_text().strip()
+            txt = soup_sougou.find(class_='txt').get_text().strip()
+            result += num + ' ' + state + '\n'
+            result += t + txt
+            return result
+
     ''' 搜狗时间'''
     if message.find('时间') != -1:
         soup_sougou = get_sougo(message)
@@ -66,7 +69,7 @@ def search(message):
         if url is not None:
             print '搜狗时间找到答案'
             soup_time = get_html(url['href'])
-            result = soup_time.find(id='clock').get_text()
+            result = soup_time.find(id='clock').get_text().strip()
             return result
 
     # 抓取百度前10条的摘要
@@ -87,7 +90,8 @@ def search(message):
                     return result
 
             '''百度问答'''
-            if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://nourl.baidu.com/?srcid='):
+            if results.attrs.has_key('mu') and results.find(class_='op_exactqa_s_answer'):
+                #results.attrs['mu'].__contains__('http://nourl.baidu.com/?srcid='):
                 prop = results.find(class_='op_exactqa_s_prop')
                 answer = results.find(class_='op_exactqa_s_answer')
                 if prop is not None and answer is not None:
@@ -137,9 +141,17 @@ def search(message):
                     result += info.get_text().strip()
                     return result
 
+            '''百度汇率'''
+            if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://forex.hexun.com'):
+                res = results.find(class_='op_exrate_result')
+                if res is not None:
+                    print '百度汇率找到答案'
+                    result += res.get_text().strip()
+                    return result
+
             '''百度歌词'''
             if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://music.baidu.com'):
-                lines = results.find_all(class_="wa-musicsong-lyric-line")
+                lines = results.find_all(class_='wa-musicsong-lyric-line')
                 if lines is not None:
                     print '百度歌词找到答案'
                     result = '\n'.join([line.get_text().strip() for line in lines])
@@ -147,30 +159,30 @@ def search(message):
 
             '''百度推荐'''
             if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('https://zhidao.baidu.com'):
-                url = results.find(class_="op_best_answer_question_link")
+                url = results.find(class_='op_best_answer_question_link')
                 if url is not None:
                     print '百度推荐找到答案'
                     zhidao_soup = get_html(url['href'])
-                    text = zhidao_soup.find(class_="best-text")
+                    text = zhidao_soup.find(class_='best-text')
                     if text is not None:
                         result = text.get_text().strip()
                         return result
 
             '''百度百科'''
-            if results.find("h3") is not None and results.find("h3").find("a").get_text().__contains__(u"百度百科"):
-                url = results.find("h3").find("a")['href']
+            if results.find('h3') is not None and results.find('h3').find('a').get_text().__contains__(u"百度百科"):
+                url = results.find('h3').find('a')['href']
                 if url is not None:
-                    print "百度百科找到答案"
+                    print '百度百科找到答案'
                     baike_soup = get_html(url)
                     [s.extract() for s in baike_soup(class_=['sup--normal', 'sup-anchor'])]  # 过滤标签
                     result = baike_soup.find(class_='lemma-summary').get_text().replace('\n', '').strip()
                     return result
 
             '''百度知道'''
-            if results.find("h3") is not None and results.find("h3").find("a").get_text().__contains__(u"百度知道"):
-                url = results.find("h3").find("a")['href']
+            if results.find('h3') is not None and results.find('h3').find('a').get_text().__contains__(u"百度知道"):
+                url = results.find('h3').find('a')['href']
                 if url is not None:
-                    print "百度知道找到答案"
+                    print '百度知道找到答案'
                     zhidao_soup = get_html(url)
                     best = zhidao_soup.find(class_='best-text')
                     text = zhidao_soup.find(class_='answer-text')
@@ -179,6 +191,17 @@ def search(message):
                         return result
                     if text is not None:
                         result = text.get_text().strip()
+                        return result
+
+            '''百度最新'''
+            if results.find('h3') is not None and results.find('h3').find('a').get_text().__contains__(u"最新相关信息"):
+                url = results.find('h3').find('a')['href']
+                if url is not None:
+                    print '百度最新找到答案'
+                    zhidao_soup = get_html(url)
+                    best = zhidao_soup.find(class_='t')
+                    if best is not None:
+                        result = best.get_text().strip()
                         return result
 
     return result

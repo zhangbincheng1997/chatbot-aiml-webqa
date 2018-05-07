@@ -1,0 +1,55 @@
+<aiml version="1.0.1" encoding="UTF-8">
+  <!-- 无合适匹配 -->
+  <category>
+    <pattern>*</pattern>
+    <template>
+      #NONE#:<input index="1" />
+    </template>
+  </category>
+
+  <category>
+    <pattern>找不到答案</pattern>
+    <template>
+      <random>
+        <li>呜呜呜，主人没有教我怎么回答"<input index="2" />"... </li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>句子长度过长</pattern>
+    <template>
+      <random>
+        <li>信息量有点大，容我想想</li>
+        <li>信息量有点大</li>
+        <li>容我想想，信息量有点大</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>过滤</pattern>
+    <template>
+      <random>
+        <li>河蟹。</li>
+        <li>开门，查水表！</li>
+        <li>嘿嘿，你已经被和谐了！</li>
+        <li>内容含有敏感词汇！</li>
+        <li>小朋友不要乱说话哦！</li>
+        <li>你不想和我一起建设社会主义了吗？</li>
+        <li>富强，民主，文明，和谐，自由，平等，公正，法治，爱国，敬业，诚信，友善......</li>
+      </random>
+    </template>
+  </category>
+
+    <category>
+    <pattern>无</pattern>
+    <template>
+      <random>
+        <li>嗯？你想说啥？</li>
+        <li>你想说啥呀？</li>
+        <li>你到底想说什么？</li>
+      </random>
+    </template>
+  </category>
+</aiml>

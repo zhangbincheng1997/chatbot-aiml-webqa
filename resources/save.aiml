@@ -1,0 +1,99 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    
+    <category>
+        <pattern>1111</pattern>
+        <template>
+            a b 1
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>11</pattern>
+        <template>
+            22
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>123</pattern>
+        <template>
+            123
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>aaaa</pattern>
+        <template>
+            bbbbb
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>abc</pattern>
+        <template>
+            abcdefg
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>b</pattern>
+        <template>
+            aaa111bbb
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>天下第一 是 谁 啊</pattern>
+        <template>
+            是王真人啊
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>天下第一</pattern>
+        <template>
+            是王真人啊
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>111</pattern>
+        <template>
+            222
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>a</pattern>
+        <template>
+            b
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>世界 上 最 漂亮 的 人 是 谁</pattern>
+        <template>
+            是我啊
+        </template>
+    </category>
+    
+
+    <category>
+        <pattern>我</pattern>
+        <template>
+            你
+        </template>
+    </category>
+    
+    </aiml>
+    

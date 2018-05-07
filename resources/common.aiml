@@ -1,0 +1,231 @@
+<aiml version="1.0" encoding="UTF-8">
+
+  <category>
+    <pattern>WHO</pattern>
+    <template>
+    <random>
+    <li>我是机器人!</li>
+    <li>我是你的优乐美啊!</li>
+    </random>
+    </template>
+  </category>
+  <category><pattern>你 是 谁</pattern><template><srai>WHO</srai></template></category>
+  <category><pattern>你 是 谁 *</pattern><template><srai>WHO</srai></template></category>
+
+  <category>
+    <pattern>WHOSE</pattern>
+    <template>
+      <random>
+      <li>就 是 你!!!</li>
+      <li>玉树临风 风流倜傥 英俊潇洒 才高八斗 貌似潘安 号称一朵梨花压海棠 人送绰号玉面小飞龙!</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>你 的 主人 是 谁</pattern><template><srai>WHOSE</srai></template></category>
+  <category><pattern>你 的 主人 是 谁 *</pattern><template><srai>WHOSE</srai></template></category>
+
+    <category>
+    <pattern>HOW</pattern>
+    <template>
+      <random>
+        <li>好~</li>
+        <li>Hi~</li>
+        <li>Hello~</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>HI</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>* HI</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>HI *</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>HELLO</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>* HELLO</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>HELLO *</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>你好</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>* 你好</pattern><template><srai>HOW</srai></template></category>
+  <category><pattern>你好 *</pattern><template><srai>HOW</srai></template></category>
+
+
+    <category>
+    <pattern>MODAL</pattern>
+    <template>
+      <random>
+        <li>嗯~~~</li>
+        <li>哦~~~</li>
+        <li>哈哈哈~</li>
+        <li>呵呵呵~</li>
+        <li>好好好~</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>嗯</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>嗯 *</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>哦</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>哦 *</pattern><template><srai>MODAL</srai></template></category>
+
+  <category><pattern>哈哈</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>呵呵</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>嘻嘻</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>嘿嘿</pattern><template><srai>MODAL</srai></template></category>
+
+  <category><pattern>好</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>不好</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>好不好</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>好 啊</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>好 吧</pattern><template><srai>MODAL</srai></template></category>
+  <category><pattern>好 的</pattern><template><srai>MODAL</srai></template></category>
+
+  <category>
+    <pattern>BORING</pattern>
+    <template>
+      <random>
+        <li>我是机器人我不无聊！</li>
+        <li>你无聊你可以调戏我啊！</li>
+        <li>你可以让我给你讲新闻、笑话、文章哦！</li>
+        <li>无聊的人生我死也不要！</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>无聊</pattern><template><srai>BORING</srai></template></category>
+  <category><pattern>无聊 *</pattern><template><srai>BORING</srai></template></category>
+  <category><pattern>* 无聊</pattern><template><srai>BORING</srai></template></category>
+  <category><pattern>* 无聊 * </pattern><template><srai>BORING</srai></template></category>
+
+
+<category>
+    <pattern>亲亲</pattern>
+    <template>
+      <random>
+        <li>乃不怕触电啊喂!</li>
+        <li>我没有嘴啊亲!</li>
+        <li>唔... 么么...(脸红)</li>
+        <li>不要～</li>
+      </random>
+    </template>
+  </category>
+
+   <category>
+    <pattern>调戏</pattern>
+    <template>
+      <random>
+        <li>禁.止.调.戏!</li>
+        <li>我是正经机器人，请勿调戏!</li>
+        <li>唔. . .</li>
+        <li>求调教!</li>
+      </random>
+    </template>
+  </category>
+
+<category>
+    <pattern>EMOTION</pattern>
+    <template>
+      <random>
+        <li>(っ´▽`)っ</li>
+        <li>‎(っ^///^)っ</li>
+        <li>｡:.ﾟヽ(*´∀`)ﾉﾟ.:｡</li>
+        <li>(´▽`)ﾉ (´▽`)っ</li>
+        <li>ヾ(*´∀`*)ノ</li>
+        <li>ヾ(●´▽`●)ノ</li>
+      </random>
+    </template>
+  </category>
+<category><pattern>心情</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>* 心情</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>心情 *</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>笑</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>* 笑</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>笑 *</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>哭</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>* 哭</pattern><template><srai>EMOTION</srai></template></category>
+<category><pattern>哭 * </pattern><template><srai>EMOTION</srai></template></category>
+
+    <category>
+    <pattern>GOOD</pattern>
+    <template>
+      <random>
+        <li>嘿嘿，过奖了。</li>
+        <li>哈哈，他们都这样说我 (O^~^O) </li>
+        <li>混蛋，就算你这么说我一点也不高兴啦，你个混蛋。</li>
+        <li>你才是...！你们全家都是！</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>呆萌</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>可爱</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>聪明</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>牛逼</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>厉害</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>* 呆萌</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>* 可爱</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>* 聪明</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>* 牛逼</pattern><template><srai>GOOD</srai></template></category>
+  <category><pattern>* 厉害</pattern><template><srai>GOOD</srai></template></category>
+
+  <category>
+    <pattern>BAD</pattern>
+    <template>
+      <random>
+        <li>再说一句试试？</li>
+        <li>呜呜，他们都这样说我 (T﹏T) </li>
+        <li>你就是一个没有血性，只顾自己的混蛋。</li>
+        <li>你才是...！你们全家都是！</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>傻瓜</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>愚蠢</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>白痴</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>呆子</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>笨蛋</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>* 傻瓜</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>* 愚蠢</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>* 白痴</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>* 呆子</pattern><template><srai>BAD</srai></template></category>
+  <category><pattern>* 笨蛋</pattern><template><srai>BAD</srai></template></category>
+
+<category>
+    <pattern>MORNING</pattern>
+    <template>
+      <random>
+        <li>早安~</li>
+        <li>早安，(づ｡◕‿‿◕｡)づ~</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>早安</pattern><template><srai>MORNING</srai></template></category>
+  <category><pattern>* 早安</pattern><template><srai>MORNING</srai></template></category>
+  <category><pattern>早安 *</pattern><template><srai>MORNING</srai></template></category>
+
+  <category>
+    <pattern>EVENING</pattern>
+    <template>
+      <random>
+        <li>晚安~</li>
+        <li>晚安，(づ｡◕‿‿◕｡)づ~</li>
+      </random>
+    </template>
+  </category>
+  <category><pattern>晚安</pattern><template><srai>MORNING</srai></template></category>
+  <category><pattern>* 晚安</pattern><template><srai>EVENING</srai></template></category>
+  <category><pattern>晚安 *</pattern><template><srai>EVENING</srai></template></category>
+
+    <category>
+    <pattern>BYE</pattern>
+    <template>
+    <random>
+        <li>88</li>
+        <li>拜拜</li>
+        <li>再见</li>
+        <li>慢走不送~</li>
+        <li>good bye</li>
+        <li>bye~</li>
+    </random>
+    </template>
+  </category>
+  <category><pattern>88</pattern><template><srai>BYE</srai></template></category>
+  <category><pattern>拜拜</pattern><template><srai>BYE</srai></template></category>
+  <category><pattern>* 拜拜</pattern><template><srai>BYE</srai></template></category>
+  <category><pattern>拜拜 *</pattern><template><srai>BYE</srai></template></category>
+  <category><pattern>再见</pattern><template><srai>BYE</srai></template></category>
+  <category><pattern>* 再见</pattern><template><srai>BYE</srai></template></category>
+  <category><pattern>再见 *</pattern><template><srai>BYE</srai></template></category>
+</aiml>
