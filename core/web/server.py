@@ -8,18 +8,26 @@ curl "0.0.0.0:5000/chat" -d "message=新闻"
 curl "0.0.0.0:5000/chat" -d "message=天气"
 curl "0.0.0.0:5000/chat" -d "message=时间"
 """
-
+import logging
+from logging.handlers import TimedRotatingFileHandler
 
 from flask import Flask, render_template, request
+
 from core.chatbot import ChatBot
-import logging
 
 app = Flask(__name__, static_url_path='')
 bot = ChatBot()
 
-log_file = 'log/info.log'
-fmt = '%(asctime)s : %(levelname)s : %(message)s'
-logging.basicConfig(filename=log_file, format=fmt, level=logging.INFO)
+# 按天对日志进行分割
+# interval: 滚动周期
+# backupCount: 备份个数
+handler = TimedRotatingFileHandler('log/info.log', when="D", interval=1, backupCount=3)
+formatter = logging.Formatter('%(asctime)s : %(levelname)s : %(message)s')
+handler.setFormatter(formatter)
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(handler)
 
 
 @app.route('/', methods=['GET', 'POST'])

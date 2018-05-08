@@ -34,7 +34,7 @@ class ChatBot:
 
     def response(self, input_message):
         input_message = input_message.strip()
-        print len(input_message)
+
         # 限制字数
         if len(input_message) > 60:
             return self.mybot.respond("句子长度过长")
