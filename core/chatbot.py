@@ -34,9 +34,9 @@ class ChatBot:
 
     def response(self, input_message):
         input_message = input_message.strip()
-
+        print len(input_message)
         # 限制字数
-        if len(input_message) > 50:
+        if len(input_message) > 60:
             return self.mybot.respond("句子长度过长")
         elif len(input_message) == 0:
             return self.mybot.respond("无")
@@ -65,7 +65,7 @@ class ChatBot:
                 if ans != '':
                     return ans.encode('utf-8')
                 else:
-                    # TODO
+                    ''' TODO '''
                     ##########
                     # 深度学习 #
                     ##########

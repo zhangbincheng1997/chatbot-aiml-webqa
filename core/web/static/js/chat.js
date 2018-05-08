@@ -1,11 +1,10 @@
-
 function chat(message) {
     $.ajax({
         url: "/chat",
         data: {"message": message},
         success: function (data) {
             var ans = '<div class="answer"><div class="heard_img left"><img src="images/ai.png"/></div>';
-            ans += '<div class="answer_text"><p>';
+            ans += '<div class="answer_text"><p style="white-space: pre-line;">';
             ans += data;
             ans += '</p><i></i>';
             ans += '</div></div>';
@@ -66,8 +65,6 @@ function keyup() {
     }
 }
 
-var wen = document.getElementById('wenwen');
-
 function _touch_start(event) {
     event.preventDefault();
     $('.wenwen_text').css('background', '#c1c1c1');
@@ -94,9 +91,6 @@ function _touch_end(event) {
         for_bottom();
     }, 1000);
 }
-
-// wen.addEventListener("touchstart", _touch_start, false);
-// wen.addEventListener("touchend", _touch_end, false);
 
 function for_bottom() {
     var speak_height = $('.speak_box').height();

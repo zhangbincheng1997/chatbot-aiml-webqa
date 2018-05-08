@@ -1,16 +1,15 @@
 ﻿<html lang="zh-cn">
 <head>
-    <meta charset="utf-8"/>
-    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
-    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
-    <meta HTTP-EQUIV="expires" CONTENT="0">
-    <meta name="apple-touch-fullscreen" content="yes"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" media="screen"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="基于AIML和WebQA的智能对话模型">
+    <meta name="keywords" content="AIML WebQA 人工智能标记语言 开放域问答">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
     <title>聊天demo</title>
-    <link rel=stylesheet type=text/css href=css/style.css>
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/chat.js"></script>
 </head>
 <body>
@@ -32,7 +31,7 @@
 </div>
 
 <div class="wenwen-footer">
-    <div class="wenwen_btn left" onClick="to_write()"><img src="images/jp_btn.png"></div>
+    <div class="wenwen_btn left" onClick="to_say()"><img src="images/yy_btn.png"></div>
     <div class="wenwen_text left">
         <div class="write_box">
             <input type="text" class="left" onKeyUp="keyup()" placeholder="请输入关键字"/>
@@ -59,6 +58,15 @@
             if (event.keyCode == 13) {
                 $("#enter").click();
             }
+        });
+
+        $('.write_box input').focus();
+
+        $('#wenwen').on("touchstart", function () {
+            _touch_start()
+        });
+        $('#wenwen').on("touchend", function () {
+            _touch_end()
         });
     });
 </script>

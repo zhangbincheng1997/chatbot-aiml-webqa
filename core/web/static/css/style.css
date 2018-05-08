@@ -1,6 +1,4 @@
 body {
-    background: url(/images/bg.jpg) no-repeat;
-    background-size: 100%;
 }
 
 @media all and (min-width: 640px) {
@@ -11,7 +9,7 @@ body {
 
     .speak_window, .wenwen-footer {
         left: 50% !important;
-        margin-left: -320px
+        margin-left: -320px;
     }
 }
 
@@ -22,10 +20,10 @@ input, button {
 .wenwen-footer {
     width: 100%;
     position: fixed;
-    bottom: -5px;
+    bottom: 0px;
     left: 0;
     background: #fff;
-    padding: 3%;
+    padding: 20px;
     border-top: solid 1px #ddd;
     box-sizing: border-box;
 }
@@ -52,6 +50,7 @@ input, button {
 
 .circle-button {
     padding: 0 5px;
+    display: none;
 }
 
 .wenwen_text .circle-button {
@@ -65,7 +64,6 @@ input, button {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    display: none;
 }
 
 .write_box input {
@@ -92,8 +90,10 @@ input, button {
 }
 
 .speak_window {
+    background: url(/images/bg.jpg) no-repeat;
+    background-size: 100% 100%;
     overflow-y: scroll;
-    height: 100%;
+    bottom: 80px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -101,7 +101,7 @@ input, button {
 }
 
 .speak_box {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     padding: 10px;
 }
 

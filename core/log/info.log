@@ -1,0 +1,160 @@
+2018-05-08 16:48:14,429 : INFO :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-05-08 16:48:14,429 : INFO :  * Restarting with stat
+2018-05-08 16:48:15,132 : WARNING :  * Debugger is active!
+2018-05-08 16:48:15,132 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 16:48:22,032 : INFO : 127.0.0.1 - - [08/May/2018 16:48:22] "GET / HTTP/1.1" 200 -
+2018-05-08 16:48:26,741 : INFO : 127.0.0.1 - - [08/May/2018 16:48:26] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 16:52:10,830 : INFO :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-05-08 16:52:10,831 : INFO :  * Restarting with stat
+2018-05-08 16:52:11,523 : WARNING :  * Debugger is active!
+2018-05-08 16:52:11,523 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 16:52:14,943 : INFO : 127.0.0.1 - - [08/May/2018 16:52:14] "GET / HTTP/1.1" 200 -
+2018-05-08 16:52:18,375 : INFO : 127.0.0.1 - - [08/May/2018 16:52:18] "GET / HTTP/1.1" 200 -
+2018-05-08 16:52:25,984 : INFO : 127.0.0.1 - - [08/May/2018 16:52:25] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 16:52:27,741 : INFO : 127.0.0.1 - - [08/May/2018 16:52:27] "GET / HTTP/1.1" 200 -
+2018-05-08 16:52:36,576 : INFO : 127.0.0.1 - - [08/May/2018 16:52:36] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 16:52:38,070 : INFO : 127.0.0.1 - - [08/May/2018 16:52:38] "GET / HTTP/1.1" 200 -
+2018-05-08 16:52:45,226 : INFO : 127.0.0.1 - - [08/May/2018 16:52:45] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 16:54:01,758 : INFO : 127.0.0.1 - - [08/May/2018 16:54:01] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:19,745 : INFO : 127.0.0.1 - - [08/May/2018 16:54:19] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:20,428 : INFO : 127.0.0.1 - - [08/May/2018 16:54:20] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:20,668 : INFO : 127.0.0.1 - - [08/May/2018 16:54:20] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:20,896 : INFO : 127.0.0.1 - - [08/May/2018 16:54:20] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:21,148 : INFO : 127.0.0.1 - - [08/May/2018 16:54:21] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:21,160 : INFO : 127.0.0.1 - - [08/May/2018 16:54:21] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:21,362 : INFO : 127.0.0.1 - - [08/May/2018 16:54:21] "GET / HTTP/1.1" 200 -
+2018-05-08 16:54:24,821 : INFO : 127.0.0.1 - - [08/May/2018 16:54:24] "GET / HTTP/1.1" 200 -
+2018-05-08 16:55:05,783 : INFO : 127.0.0.1 - - [08/May/2018 16:55:05] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 16:55:20,781 : INFO : 127.0.0.1 - - [08/May/2018 16:55:20] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 16:55:22,440 : INFO : 127.0.0.1 - - [08/May/2018 16:55:22] "GET / HTTP/1.1" 200 -
+2018-05-08 16:55:25,750 : INFO : 127.0.0.1 - - [08/May/2018 16:55:25] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 16:57:18,772 : INFO : 127.0.0.1 - - [08/May/2018 16:57:18] "GET / HTTP/1.1" 200 -
+2018-05-08 16:57:28,887 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET / HTTP/1.1" 200 -
+2018-05-08 16:57:28,900 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 16:57:28,901 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 16:57:28,902 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 16:57:28,915 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 16:57:28,941 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 16:57:28,945 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 16:57:28,949 : INFO : 127.0.0.1 - - [08/May/2018 16:57:28] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 16:57:41,099 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET / HTTP/1.1" 200 -
+2018-05-08 16:57:41,111 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 16:57:41,116 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 16:57:41,119 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 16:57:41,135 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 16:57:41,138 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 16:57:41,146 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 16:57:41,152 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 16:57:41,363 : INFO : 127.0.0.1 - - [08/May/2018 16:57:41] "GET /images/bg.jpg HTTP/1.1" 200 -
+2018-05-08 16:58:01,738 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET / HTTP/1.1" 200 -
+2018-05-08 16:58:01,758 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 16:58:01,761 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 16:58:01,761 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 16:58:01,785 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 16:58:01,792 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 16:58:01,796 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 16:58:01,810 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 16:58:01,977 : INFO : 127.0.0.1 - - [08/May/2018 16:58:01] "GET /images/bg.jpg HTTP/1.1" 200 -
+2018-05-08 17:00:47,044 : INFO : 127.0.0.1 - - [08/May/2018 17:00:47] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 17:01:11,738 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET / HTTP/1.1" 200 -
+2018-05-08 17:01:11,756 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:01:11,760 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 17:01:11,761 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 17:01:11,771 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 17:01:11,781 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 17:01:11,791 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 17:01:11,796 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 17:01:11,982 : INFO : 127.0.0.1 - - [08/May/2018 17:01:11] "GET /images/bg.jpg HTTP/1.1" 200 -
+2018-05-08 17:03:05,370 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET / HTTP/1.1" 200 -
+2018-05-08 17:03:05,385 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:03:05,387 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 17:03:05,388 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 17:03:05,415 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 17:03:05,418 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 17:03:05,430 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 17:03:05,433 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 17:03:05,621 : INFO : 127.0.0.1 - - [08/May/2018 17:03:05] "GET /images/bg.jpg HTTP/1.1" 200 -
+2018-05-08 17:04:15,594 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET / HTTP/1.1" 200 -
+2018-05-08 17:04:15,607 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:04:15,610 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 17:04:15,610 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 17:04:15,621 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 17:04:15,640 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 17:04:15,646 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 17:04:15,653 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 17:04:15,844 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/bg.jpg HTTP/1.1" 200 -
+2018-05-08 17:04:15,853 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET / HTTP/1.1" 200 -
+2018-05-08 17:04:15,869 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 17:04:15,870 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:04:15,872 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 17:04:15,885 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 17:04:15,900 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 17:04:15,904 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 17:04:15,907 : INFO : 127.0.0.1 - - [08/May/2018 17:04:15] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 17:04:16,083 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET / HTTP/1.1" 200 -
+2018-05-08 17:04:16,101 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:04:16,102 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /js/chat.js HTTP/1.1" 200 -
+2018-05-08 17:04:16,103 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /js/jquery-3.3.1.min.js HTTP/1.1" 200 -
+2018-05-08 17:04:16,119 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /images/ai.png HTTP/1.1" 200 -
+2018-05-08 17:04:16,123 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /images/saying.gif HTTP/1.1" 200 -
+2018-05-08 17:04:16,128 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /images/yy_btn.png HTTP/1.1" 200 -
+2018-05-08 17:04:16,137 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /images/help_btn.png HTTP/1.1" 200 -
+2018-05-08 17:04:16,324 : INFO : 127.0.0.1 - - [08/May/2018 17:04:16] "GET /images/bg.jpg HTTP/1.1" 200 -
+2018-05-08 17:04:21,543 : INFO : 127.0.0.1 - - [08/May/2018 17:04:21] "GET /chat?message=tq HTTP/1.1" 200 -
+2018-05-08 17:04:32,576 : INFO : 127.0.0.1 - - [08/May/2018 17:04:32] "GET /chat?message=tianqi HTTP/1.1" 200 -
+2018-05-08 17:38:55,847 : INFO : 127.0.0.1 - - [08/May/2018 17:38:55] "GET / HTTP/1.1" 200 -
+2018-05-08 17:39:17,220 : INFO : 127.0.0.1 - - [08/May/2018 17:39:17] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 17:39:24,112 : INFO : 127.0.0.1 - - [08/May/2018 17:39:24] "GET /chat?message=%E8%8B%B9%E6%9E%9C%E8%82%A1%E7%A5%A8 HTTP/1.1" 200 -
+2018-05-08 17:41:13,652 : INFO : 127.0.0.1 - - [08/May/2018 17:41:13] "GET / HTTP/1.1" 200 -
+2018-05-08 17:41:14,636 : INFO : 127.0.0.1 - - [08/May/2018 17:41:14] "GET / HTTP/1.1" 200 -
+2018-05-08 17:41:14,988 : INFO : 127.0.0.1 - - [08/May/2018 17:41:14] "GET / HTTP/1.1" 200 -
+2018-05-08 17:41:15,115 : INFO : 127.0.0.1 - - [08/May/2018 17:41:15] "GET / HTTP/1.1" 200 -
+2018-05-08 17:41:20,949 : INFO : 127.0.0.1 - - [08/May/2018 17:41:20] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:41:21,070 : INFO : 127.0.0.1 - - [08/May/2018 17:41:21] "GET /css/style.css HTTP/1.1" 304 -
+2018-05-08 17:41:22,250 : INFO : 127.0.0.1 - - [08/May/2018 17:41:22] "GET / HTTP/1.1" 200 -
+2018-05-08 17:41:22,732 : INFO : 127.0.0.1 - - [08/May/2018 17:41:22] "GET / HTTP/1.1" 200 -
+2018-05-08 17:42:52,115 : INFO : 127.0.0.1 - - [08/May/2018 17:42:52] "GET / HTTP/1.1" 200 -
+2018-05-08 17:42:53,500 : INFO : 127.0.0.1 - - [08/May/2018 17:42:53] "GET /css/style.css HTTP/1.1" 200 -
+2018-05-08 17:42:54,998 : INFO : 127.0.0.1 - - [08/May/2018 17:42:54] "GET / HTTP/1.1" 200 -
+2018-05-08 17:43:03,195 : INFO : 127.0.0.1 - - [08/May/2018 17:43:03] "GET /chat?message=%E5%A4%A9%E6%B0%94 HTTP/1.1" 200 -
+2018-05-08 17:43:08,398 : INFO : 127.0.0.1 - - [08/May/2018 17:43:08] "GET /chat?message=%E8%82%A1%E7%A5%A8 HTTP/1.1" 200 -
+2018-05-08 17:44:32,673 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:44:32,736 : INFO :  * Restarting with stat
+2018-05-08 17:44:33,664 : WARNING :  * Debugger is active!
+2018-05-08 17:44:33,664 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:44:39,719 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:44:39,770 : INFO :  * Restarting with stat
+2018-05-08 17:44:41,008 : WARNING :  * Debugger is active!
+2018-05-08 17:44:41,008 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:50:09,480 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:50:09,534 : INFO :  * Restarting with stat
+2018-05-08 17:50:10,433 : WARNING :  * Debugger is active!
+2018-05-08 17:50:10,434 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:50:12,453 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:50:12,514 : INFO :  * Restarting with stat
+2018-05-08 17:50:13,237 : WARNING :  * Debugger is active!
+2018-05-08 17:50:13,238 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:50:28,358 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:50:28,410 : INFO :  * Restarting with stat
+2018-05-08 17:50:29,122 : WARNING :  * Debugger is active!
+2018-05-08 17:50:29,122 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:51:02,382 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:51:02,436 : INFO :  * Restarting with stat
+2018-05-08 17:51:03,204 : WARNING :  * Debugger is active!
+2018-05-08 17:51:03,204 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:51:06,229 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:51:06,285 : INFO :  * Restarting with stat
+2018-05-08 17:51:07,072 : WARNING :  * Debugger is active!
+2018-05-08 17:51:07,072 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:51:26,231 : INFO :  * Detected change in '/home/littleredhat/my-chatbot/core/crawler/crawl.py', reloading
+2018-05-08 17:51:26,287 : INFO :  * Restarting with stat
+2018-05-08 17:51:26,988 : WARNING :  * Debugger is active!
+2018-05-08 17:51:26,989 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:51:27,891 : INFO :  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2018-05-08 17:51:27,891 : INFO :  * Restarting with stat
+2018-05-08 17:51:28,568 : WARNING :  * Debugger is active!
+2018-05-08 17:51:28,568 : INFO :  * Debugger PIN: 115-869-991
+2018-05-08 17:51:30,961 : INFO : 127.0.0.1 - - [08/May/2018 17:51:30] "GET / HTTP/1.1" 200 -
+2018-05-08 17:51:35,720 : INFO : 127.0.0.1 - - [08/May/2018 17:51:35] "GET /chat?message=%E8%AF%84%E4%BC%B0%E8%82%A1%E7%A5%A8 HTTP/1.1" 200 -
+2018-05-08 17:51:39,303 : INFO : 127.0.0.1 - - [08/May/2018 17:51:39] "GET /chat?message=%E8%8B%B9%E6%9E%9C%E8%82%A1%E7%A5%A8 HTTP/1.1" 200 -
+2018-05-08 17:51:46,253 : INFO : 127.0.0.1 - - [08/May/2018 17:51:46] "GET /chat?message=%E5%8D%8A%E5%A3%B6%E7%BA%B1%E6%AD%8C%E8%AF%8D HTTP/1.1" 200 -

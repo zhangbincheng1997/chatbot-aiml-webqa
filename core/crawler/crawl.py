@@ -110,6 +110,16 @@ def search(message):
                     result += answer.get_text().strip()
                     return result
 
+            '''百度翻译'''
+            if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://fanyi.baidu.com'):
+                one = results.find(class_='op_sp_fanyi_line_one')
+                two = results.find(class_='op_sp_fanyi_line_two')
+                if one is not None and two is not None:
+                    print '百度翻译找到答案'
+                    result += one.get_text().strip() + '\n'
+                    result += two.get_text().strip()
+                    return result
+
             '''百度计算'''
             if results.attrs.has_key('mu') and results.attrs['mu'].__contains__(
                     'http://open.baidu.com/static/calculator'):
@@ -130,7 +140,7 @@ def search(message):
                     return result
 
             '''百度股票'''
-            if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://gupiao.baidu.com'):
+            if results.attrs.has_key('mu') and results.attrs['tpl'].__contains__('stockdynamic_moretab'):
                 pan = results.find(class_='op-stockdynamic-moretab-pan')
                 info = results.find(class_='op-stockdynamic-moretab-info')
                 if pan is not None and info is not None:
@@ -139,18 +149,8 @@ def search(message):
                     result += info.get_text().strip()
                     return result
 
-            '''百度翻译'''
-            if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://fanyi.baidu.com'):
-                one = results.find(class_='op_sp_fanyi_line_one')
-                two = results.find(class_='op_sp_fanyi_line_two')
-                if one is not None and two is not None:
-                    print '百度翻译找到答案'
-                    result += one.get_text().strip() + '\n'
-                    result += two.get_text().strip()
-                    return result
-
             '''百度歌词'''
-            if results.attrs.has_key('mu') and results.attrs['mu'].__contains__('http://music.baidu.com'):
+            if results.attrs.has_key('mu') and results.attrs['tpl'].__contains__('music_lrc'):
                 lines = results.find_all(class_='wa-musicsong-lyric-line')
                 if lines is not None:
                     print '百度歌词找到答案'

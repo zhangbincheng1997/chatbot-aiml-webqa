@@ -29,7 +29,7 @@
     <pattern>学习完毕</pattern>
     <template>
         <learn>resources/save.aiml</learn>
-        我学会啦，下次你就可以问我"<input index="4" />"...
+        我学会啦，下次你就可以问我"<input index="4" />"......
     </template>
   </category>
 
