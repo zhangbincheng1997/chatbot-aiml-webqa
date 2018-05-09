@@ -20,7 +20,6 @@ $ pip2 install jieba
 $ pip2 install aiml
 $ pip2 install lxml
 $ pip2 install beautifulsoup4
-$ pip2 install shelve
 $ pip2 install flask
 ```
 
