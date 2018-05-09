@@ -1,108 +1,97 @@
-body {
-}
-
 @media all and (min-width: 640px) {
-    body, html, .wenwen-footer, .speak_window {
+    body, html, .footer, .speak_window {
         width: 640px !important;
         margin: 0 auto
     }
 
-    .speak_window, .wenwen-footer {
+    .speak_window, .footer {
         left: 50% !important;
         margin-left: -320px;
     }
 }
 
-input, button {
-    outline: none;
+.left {
+    float: left;
 }
 
-.wenwen-footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    left: 0;
-    background: #fff;
-    padding: 20px;
-    border-top: solid 1px #ddd;
-    box-sizing: border-box;
-}
-
-.wenwen_btn, .wenwen_help {
-    width: 15%;
-    text-align: center;
-}
-
-.wenwen_btn img, .wenwen_help img {
-    height: 40px;
-}
-
-.wenwen_text {
-    height: 40px;
-    border-radius: 5px;
-    border: solid 1px #636162;
-    box-sizing: border-box;
-    width: 66%;
-    text-align: center;
-    overflow: hidden;
-    margin-left: 2%;
-}
-
-.circle-button {
-    padding: 0 5px;
-    display: none;
-}
-
-.wenwen_text .circle-button {
-    font-size: 14px;
-    color: #666;
-    line-height: 38px;
-}
-
-.write_box {
-    background: #fff;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-}
-
-.write_box input {
-    height: 40px;
-    padding: 0 5px;
-    line-height: 40px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 0;
-}
-
-.wenwen_help button {
-    width: 95%;
-    background: #42929d;
-    color: #fff;
-    border-radius: 5px;
-    border: 0;
-    height: 40px;
-    display: none;
-}
-
-#wenwen {
-    height: 100%;
+.right {
+    float: right;
 }
 
 .speak_window {
-    background: url(/images/bg.jpg) no-repeat;
+    background: url(/images/bg.png) no-repeat;
     background-size: 100% 100%;
     overflow-y: scroll;
-    bottom: 80px;
-    width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    bottom: 80px;
 }
 
 .speak_box {
     margin-bottom: 20px;
     padding: 10px;
+}
+
+.footer {
+    background: #fff;
+    border-top: solid 1px #ddd;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+}
+
+.icon {
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.circle, .rectangle {
+    width: 15%;
+    text-align: center;
+}
+
+.circle img {
+    height: 40px;
+}
+
+.rectangle button {
+    background: #67a9f1;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    width: 80%;
+    height: 40px;
+}
+
+.chat_box {
+    width: 66%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.chat_box input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.write_list {
+    background: #fff;
+    border-top: solid 1px #ddd;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    padding: 5px;
 }
 
 .question, .answer {
@@ -115,31 +104,6 @@ input, button {
 
 .question > div {
     display: inline-block;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-.clear {
-    clear: both;
-}
-
-.heard_img {
-    height: 60px;
-    width: 60px;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #ddd;
-}
-
-.heard_img img {
-    width: 100%;
-    height: 100%
 }
 
 .question_text, .answer_text {
@@ -162,7 +126,7 @@ input, button {
     padding: .5rem;
     margin: 0;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 40px;
     box-sizing: border-box;
     vertical-align: middle;
     display: table-cell;
@@ -175,7 +139,7 @@ input, button {
 }
 
 .question_text p {
-    background: #42929d;
+    background: #67a9f1;
     color: #fff;
     text-align: left;
 }
@@ -195,38 +159,6 @@ input, button {
 }
 
 .question_text i {
-    border-left: 10px solid #42929d;
+    border-left: 10px solid #67a9f1;
     right: 10px;
-}
-
-.answer_text p a {
-    color: #42929d;
-    display: inline-block;
-}
-
-audio {
-    display: none;
-}
-
-.saying {
-    position: fixed;
-    bottom: 30%;
-    left: 50%;
-    width: 120px;
-    margin-left: -60px;
-    display: none;
-}
-
-.saying img {
-    width: 100%;
-}
-
-.write_list {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    border-top: solid 1px #ddd;
-    padding: 5px;
-    line-height: 30px;
 }

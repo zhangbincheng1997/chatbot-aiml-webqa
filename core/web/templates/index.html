@@ -17,7 +17,7 @@
 <div class="speak_window">
     <div class="speak_box">
         <div class="answer">
-            <div class="heard_img left"><img src="images/ai.png"></div>
+            <div class="icon left"><img src="images/ai.png"></div>
             <div class="answer_text">
                 <p>hello~~~我是你的专属宝宝！你想和我说什么？</p>
                 <i></i>
@@ -26,48 +26,29 @@
     </div>
 </div>
 
-<div class="saying">
-    <img src="images/saying.gif"/>
-</div>
-
-<div class="wenwen-footer">
-    <div class="wenwen_btn left" onClick="to_say()"><img src="images/yy_btn.png"></div>
-    <div class="wenwen_text left">
-        <div class="write_box">
-            <input type="text" class="left" onKeyUp="keyup()" placeholder="请输入关键字"/>
-        </div>
-        <div class="circle-button" id="wenwen">
-            按住 说话
-        </div>
-    </div>
-    <div class="wenwen_help right">
+<div class="footer">
+    <div class="circle left">
         <a href="https://github.com/littleredhat1997">
-            <img src="images/help_btn.png">
+            <img src="images/keyboard.png">
         </a>
-        <button id="enter" onClick="up_say()" class="right">发送</button>
     </div>
-    <div style="opacity:0;" class="clear"></div>
-</div>
-
-<div style="text-align:center;">
+    <div class="chat_box left">
+        <input type="text" onKeyUp="key_up()" placeholder="请输入关键字"/>
+    </div>
+    <div class="rectangle right">
+        <button onClick="send_message()">发送</button>
+    </div>
 </div>
 
 <script type="text/javascript">
     $(function () {
         $(document).keydown(function (event) {
             if (event.keyCode == 13) {
-                $("#enter").click();
+                send_message();
             }
         });
 
-        $('.write_box input').focus();
-
-        $('#wenwen').on("touchstart", function () {
-            _touch_start()
-        });
-        $('#wenwen').on("touchend", function () {
-            _touch_end()
-        });
+        $('.chat_box input').focus();
     });
 </script>
 

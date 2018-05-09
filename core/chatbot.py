@@ -1,89 +1,114 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
+import ConfigParser
+import shelve
+
 import aiml
 import jieba
 
-import learn
 from crawler import crawl
+from deeplearning import deep
 from tool import filter
 
 
 class ChatBot:
     """
-        基于 AIML 和 WebQA的智能对话模型
+        基于 AIML 和 WebQA 的智能对话模型
         1. AIML 人工智能标记语言
         2. WebQA 开放域问答
+        3. Deeplearning 深度学习
 
         usage:
         bot = ChatBot()
         print bot.response('你好')
     """
 
-    def __init__(self, filter_file=u'resources/敏感词.txt', load_file='resources/load.xml', cmd='load aiml b'):
+    def __init__(self, config_file='config.cfg'):
+        config = ConfigParser.ConfigParser()
+        config.read(config_file)
+        self.filter_file = config.get('resource', 'filter_file')
+        self.load_file = config.get('resource', 'load_file')
+        self.save_file = config.get('resource', 'save_file')
+        self.shelve_file = config.get('resource', 'shelve_file')
+
         # 初始化分词器
         jieba.initialize()
 
         # 初始化过滤器
         self.gfw = filter.DFAFilter()
-        self.gfw.parse(filter_file)
+        self.gfw.parse(self.filter_file)
 
         # 初始化知识库
         self.mybot = aiml.Kernel()
-        self.mybot.bootstrap(learnFiles=load_file, commands=cmd)
+        self.mybot.bootstrap(learnFiles=self.load_file, commands='load aiml b')
 
-    def response(self, input_message):
-        input_message = input_message.strip()
+        # 初始化学习库
+        self.template = '<aiml version="1.0" encoding="UTF-8">\n{rule}\n</aiml>'
+        self.category_template = '<category><pattern>{pattern}</pattern><template>{answer}</template></category>'
 
+    def response(self, message):
         # 限制字数
-        if len(input_message) > 60:
-            return self.mybot.respond("句子长度过长")
-        elif len(input_message) == 0:
-            return self.mybot.respond("无")
+        if len(message) > 60:
+            return self.mybot.respond('MAX')
+        elif len(message) == 0:
+            return self.mybot.respond('MIN')
 
         # 过滤敏感词
-        input_message = self.gfw.filter(input_message, "*")
-        if input_message.find("*") != -1:
-            return self.mybot.respond("过滤")
-
-        # 结巴分词
-        message = ' '.join(jieba.cut(input_message))
+        message = self.gfw.filter(message, "*")
+        if message.find("*") != -1:
+            return self.mybot.respond('过滤')
 
         # 结束聊天
         if message == 'exit' or message == 'quit':
             return self.mybot.respond('再见')
         # 开始聊天
         else:
-            result = self.mybot.respond(message)
+            ########
+            # AIML #
+            ########
+            result = self.mybot.respond(' '.join(jieba.cut(message)))
 
             # 匹配模式
             if result[0] != '#':
                 return result
             # 搜索模式
             elif result.find('#NONE#') != -1:
-                ans = crawl.search(input_message)
+                #########
+                # WebQA #
+                #########
+                ans = crawl.search(message)
                 if ans != '':
                     return ans.encode('utf-8')
                 else:
-                    ''' TODO '''
-                    ##########
-                    # 深度学习 #
-                    ##########
-                    return self.mybot.respond('找不到答案')
+                    ###############
+                    # Deeplearing #
+                    ###############
+                    ans = deep.tuling(message)
+                    return ans.encode('utf-8')
             # 学习模式
             elif result.find('#LEARN#') != -1:
                 question = result[8:]
-                answer = input_message
-                learn.save(question, answer)
-                return self.mybot.respond('学习完毕')
+                answer = message
+                self.save(question, answer)
+                return self.mybot.respond('已学习')
             # MAY BE BUG
             else:
-                exit()
+                return self.mybot.respond('无答案')
+
+    def save(self, question, answer):
+        db = shelve.open(self.shelve_file, 'c', writeback=True)
+        db[question] = answer
+        db.sync()
+        rules = []
+        for r in db:
+            rules.append(self.category_template.format(pattern=r, answer=db[r]))
+        with open(self.save_file, 'w') as fp:
+            fp.write(self.template.format(rule='\n'.join(rules)))
 
 
 if __name__ == '__main__':
     bot = ChatBot()
-    print 'AI > ' + bot.response('天气')
     while True:
-        input_message = raw_input('ME > ')
-        print 'AI > ' + bot.response(input_message)
+        message = raw_input('ME > ')
+        print 'AI > ' + bot.response(message)

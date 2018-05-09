@@ -1,21 +1,19 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
-  <!-- 学习功能 -->
-  <category>
+    <!-- 学习功能 -->
+    <category>
     <pattern>LEARN</pattern>
-    <template>
-      那你教我吧
-    </template>
-  </category>
-  <category><pattern>NO</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>错</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>错 *</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>不是</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>不是 *</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>不 对</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>不 正确</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>* 说错 *</pattern><template><srai>LEARN</srai></template></category>
-  <category><pattern>* 答错 *</pattern><template><srai>LEARN</srai></template></category>
+    <template>那你教我吧</template>
+    </category>
+    <category><pattern>NO</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>错</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>错 *</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>不是</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>不是 *</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>不 对</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>不 正确</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>* 说错 *</pattern><template><srai>LEARN</srai></template></category>
+    <category><pattern>* 答错 *</pattern><template><srai>LEARN</srai></template></category>
 
 	<category>
 		<pattern>*</pattern>
@@ -26,11 +24,11 @@
 	</category>
 
     <category>
-    <pattern>学习完毕</pattern>
-    <template>
-        <learn>resources/save.aiml</learn>
-        我学会啦，下次你就可以问我"<input index="4" />"......
-    </template>
-  </category>
+        <pattern>已学习</pattern>
+        <template>
+            <learn>resources/save.aiml</learn>
+            我学会啦，下次你就可以问我"<input index="4" />"......
+        </template>
+    </category>
 
 </aiml>
