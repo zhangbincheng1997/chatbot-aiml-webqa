@@ -14,7 +14,11 @@ from logging.handlers import TimedRotatingFileHandler
 
 from flask import Flask, render_template, request
 
-from core.chatbot import ChatBot
+import sys
+from os import path
+
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+from chatbot import ChatBot
 
 
 def init_log(log_file='log/info.log'):

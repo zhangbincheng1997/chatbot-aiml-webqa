@@ -108,16 +108,6 @@ def search(message):
                     result = '\n'.join([t1.get_text().strip() + t2.get_text().strip() for t1, t2 in zip(text1, text2)])
                     return result
 
-            '''百度汇率'''
-            if results.attrs.has_key('tpl') and results.attrs['tpl'] == 'exrate':
-                res = results.find(class_='op_exrate_result')
-                tip = results.find(class_='op_exrate_tip')
-                if res is not None and tip is not None:
-                    print '百度汇率找到答案'
-                    result += res.get_text().strip() + '\n'
-                    result += tip.get_text().strip()
-                    return result
-
             '''百度图谱'''
             if results.attrs.has_key('tpl') and results.attrs['tpl'] == 'exactqa':
                 answer = results.find(class_='op_exactqa_s_answer')
@@ -131,13 +121,23 @@ def search(message):
                     result = ' '.join([a.find('a')['title'] for a in body.select('.op_exactqa_item')])
                     return result
 
+            '''百度汇率'''
+            if results.attrs.has_key('tpl') and results.attrs['tpl'] == 'exrate':
+                res = results.find(class_='op_exrate_result')
+                tip = results.find(class_='op_exrate_tip')
+                if res is not None and tip is not None:
+                    print '百度汇率找到答案'
+                    result += res.get_text().strip() + '\n'
+                    result += tip.get_text().strip()
+                    return result
+
             '''百度计算'''
             if results.attrs.has_key('tpl') and results.attrs['tpl'] == 'calculator_html':
                 pro = results.find(class_='op_new_val_screen_process')
                 res = results.find(class_='op_new_val_screen_result')
                 if pro is not None and res is not None:
                     print '百度计算找到答案'
-                    result += pro.get_text().strip() + '\n'
+                    result += pro.get_text().strip() + '='
                     result += res.get_text().strip()
                     return result
 
