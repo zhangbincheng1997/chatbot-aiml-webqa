@@ -182,16 +182,20 @@
             </random>
         </template>
     </category>
+    <category><pattern>SB</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>傻瓜</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>愚蠢</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>白痴</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>呆子</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>笨蛋</pattern><template><srai>BAD</srai></template></category>
+    <category><pattern>神经病</pattern><template><srai>BAD</srai></template></category>
+    <category><pattern>* SB</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>* 傻瓜</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>* 愚蠢</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>* 白痴</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>* 呆子</pattern><template><srai>BAD</srai></template></category>
     <category><pattern>* 笨蛋</pattern><template><srai>BAD</srai></template></category>
+    <category><pattern>* 神经病</pattern><template><srai>BAD</srai></template></category>
 
     <category>
         <pattern>MORNING</pattern>

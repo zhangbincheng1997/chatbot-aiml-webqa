@@ -35,7 +35,7 @@ function send_message() {
     if (text == '') {
         alert('请输入聊天内容！');
         $('.chat_box input').focus();
-        $('.speak_window').css('background-image', 'url(/images/bg.jpg)');
+        $('body').css('background-image', 'url(/images/bg.jpg)');
     } else {
         var str = '<div class="question">'
             + '<div class="icon right"><img src="images/me.png"/></div>'

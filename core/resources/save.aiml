@@ -1,9 +1,0 @@
-<aiml version="1.0" encoding="UTF-8">
-<category><pattern>世界 上 最 漂亮 的 女人</pattern><template>是洪老师</template></category>
-<category><pattern>世界 上 最 漂亮 的 女生</pattern><template>是洪老师啊</template></category>
-<category><pattern>天下第一</pattern><template>是我啊</template></category>
-<category><pattern>我 是 钢铁 侠</pattern><template>是你好帅啊</template></category>
-<category><pattern>最 漂亮 的 女生</pattern><template>是我老婆啊</template></category>
-<category><pattern>世界 上 最 好看 的 女人</pattern><template>是洪老师啊</template></category>
-<category><pattern>林 越是 谁</pattern><template>是资本主义的坚实追随者</template></category>
-</aiml>

@@ -9,17 +9,19 @@ curl "0.0.0.0:5000/chat" -d "message=天气"
 curl "0.0.0.0:5000/chat" -d "message=时间"
 """
 
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
+from chatbot import ChatBot
 from flask import Flask, render_template, request
 
-import sys
-from os import path
 
-sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
-from chatbot import ChatBot
-
+########################################
 
 def init_log(log_file='log/info.log'):
     """
@@ -38,8 +40,13 @@ def init_log(log_file='log/info.log'):
 
 
 logger = init_log()
+
 bot = ChatBot()
+
 app = Flask(__name__, static_url_path='')
+
+
+########################################
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -56,6 +63,12 @@ def response():
         return answer
 
 
+@app.route('/forget', methods=['GET'])
+def forget():
+    bot.forget()
+    return 'success'
+
+
 if __name__ == '__main__':
-    print bot.response('时间')
+    print bot.response('四大美女')
     app.run('0.0.0.0', debug=True)

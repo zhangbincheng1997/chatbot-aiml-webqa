@@ -106,6 +106,12 @@ class ChatBot:
         with open(self.save_file, 'w') as fp:
             fp.write(self.template.format(rule='\n'.join(rules)))
 
+    def forget(self):
+        import os
+        os.remove(self.save_file) if os.path.exists(self.save_file) else None
+        os.remove(self.shelve_file) if os.path.exists(self.shelve_file) else None
+        self.mybot.bootstrap(learnFiles=self.load_file, commands='load aiml b')
+
 
 if __name__ == '__main__':
     bot = ChatBot()
