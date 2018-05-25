@@ -159,38 +159,30 @@ def search(message):
                     result = '\n'.join([line.get_text().strip() for line in lines])
                     return result
 
-            '''百度推荐'''
-            if results.attrs.has_key('tpl') and results.attrs.has_key('tpl') and results.attrs['tpl'] == 'best_answer':
-                url = results.find(class_='op_best_answer_question_link')
-                if url is not None:
-                    print '百度推荐找到答案'
-                    soup_html = get_html(url['href'])
-                    text = soup_html.find(class_='best-text')
-                    if text is not None:
-                        result = text.get_text().strip()
-                        return result
-
             '''百度最新'''
-            if results.find('h3') is not None and results.attrs.has_key('tpl') and results.attrs[
-                'tpl'] == 'sp_realtime_bigpic5':
-                url = results.find('h3').find('a')['href']
-                if url is not None:
-                    print '百度最新找到答案'
-                    soup_html = get_html(url)
-                    best = soup_html.find(class_='t')
-                    if best is not None:
-                        result = best.get_text().strip()
-                        return result
+            if results.attrs.has_key('tpl') and results.attrs['tpl'] == 'sp_realtime_bigpic5':
+                if results.find('h3') is not None:
+                    url = results.find('h3').find('a')['href']
+                    if url is not None:
+                        print '百度最新找到答案'
+                        soup_html = get_html(url)
+                        best = soup_html.find(class_='t')
+                        if best is not None:
+                            result = best.get_text().strip()
+                            return result
 
             '''百度百科'''
-            if results.find('h3') is not None and results.find('h3').find('a').get_text().__contains__(u"百度百科"):
+            if results.find('h3') is not None and results.find('h3').find('a').get_text().__contains__(u"百度百科") \
+                    and i < 3:
                 url = results.find('h3').find('a')['href']
                 if url is not None:
                     print '百度百科找到答案'
                     soup_baike = get_html(url)
                     [s.extract() for s in soup_baike(class_=['sup--normal', 'sup-anchor'])]  # 过滤标签
                     result = soup_baike.find(class_='lemma-summary').get_text().replace('\n', '').strip()
-                    if result != '': return result
+                    if len(result) > 100:
+                        result = result[:100] + '...' + (u'<a href="%s">点击查看</a>' % url)
+                    return result
 
             '''百度知道'''
             if results.find('h3') is not None and results.find('h3').find('a').get_text().__contains__(u"百度知道") \
@@ -203,10 +195,11 @@ def search(message):
                     text = soup_zhidao.find(class_='answer-text')
                     if best is not None:
                         result = best.get_text().strip()
-                        return result
                     if text is not None:
                         result = text.get_text().strip()
-                        return result
+                    if len(result) > 100:
+                        result = result[:100] + '...' + (u'<a href="%s">点击查看</a>' % url)
+                    return result
 
     return result
 
