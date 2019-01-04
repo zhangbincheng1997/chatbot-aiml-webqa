@@ -1,4 +1,4 @@
-# 基于 AIML 和 WebQA 的智能对话模型
+# 智能对话模型
 
 ## 概述
 1. AIML 人工智能标记语言
@@ -27,7 +27,7 @@ $ pip2 install flask
 Working directory: chatbot-aiml-webqa/core
 ```
 $ cd chatbot-aiml-webqa/core
-$ python2 web/server.py (nohub)
+$ python2 web/server.py (or $ nohub python2 web/server.py)
 
 > ......
 > * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
@@ -74,8 +74,7 @@ $ curl "0.0.0.0:5000/chat" -d "message=时间"
 ### 步骤四：神经网络
 基于Seq2Seq模型的下一代对话引擎不仅仅是在现有的回答中训练最佳回答，而是能自我创造一个类似于人类的回答。  
 语料库：http://61.93.89.94/Noah_NRM_Data/  
-可参考：https://github.com/littleredhat1997/seq2seq-chatbot  
-目前这部分没时间整合......暂时先用图灵机器人API代替吧~~~
+目前这部分没时间实现......暂时先用图灵机器人API代替吧~~~
 
 ### 学习功能
 利用AIML模板+shelve存储  
